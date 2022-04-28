@@ -23,7 +23,9 @@ function Books() {
 
   return (
     <div>
-      <Book books={books} />
+      {books.map((book) => (
+        <Book key={book.id} book={book} />
+      ))}
       <h2 className="heading-2">ADD NEW BOOK</h2>
       <AddBook />
     </div>
