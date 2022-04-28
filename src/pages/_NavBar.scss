@@ -23,12 +23,12 @@
         list-style: none;
 
         &__link {
+          cursor: pointer;
           text-decoration: none;
           color: var(--black);
         }
 
         .disable {
-          cursor: not-allowed;
           opacity: 0.5;
         }
       }
