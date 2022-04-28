@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Math Magicians
+# Bookstore App
 
 > In this project, I add events to Calculator and use an existing logic files in my project:
 
