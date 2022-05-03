@@ -10,14 +10,13 @@
 
 ## for this milestone I followed the following requirements
 
-* Initialize React app.
-* Reusable components are created.
-* Add React router and set two `<Route>` and `<Link>` for the app navigation
-* Books page is the default view
-* Display the list of books with Remove button
-* Create a component book for displaying single book
-* A form for adding book is created
-* Categories should a button "Check status" only
+* redux library and react-redux libraries are used.
+* Used a feature folder to structure the project.
+* Write Book actions and reducers using `ducks pattern`
+* Write categories actions and reducers using `ducks pattern`
+* Redux stores are configured
+
+> Also I added redux devtools
 
 ## Technologies
 
