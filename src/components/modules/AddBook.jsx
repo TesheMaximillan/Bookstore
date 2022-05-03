@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+
+import { createBooks } from '../../redux/books/books';
 
 function AddBook() {
   const [addBook, setAddBook] = useState({
@@ -6,12 +9,17 @@ function AddBook() {
     author: '',
   });
 
+  const dispatch = useDispatch();
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    const { title, author } = addBook;
+    dispatch(createBooks(title, author));
   };
 
   const onInputChange = (e) => {
     setAddBook({
+      ...addBook,
       [e.target.name]: e.target.value,
     });
   };
@@ -25,7 +33,7 @@ function AddBook() {
         placeholder="Title"
         value={title}
         name="title"
-        onSubmit={onInputChange}
+        onChange={onInputChange}
       />
       <input
         className="input-author"
@@ -33,7 +41,7 @@ function AddBook() {
         placeholder="Author"
         value={author}
         name="author"
-        onSubmit={onInputChange}
+        onChange={onInputChange}
       />
       <button className="btn btn-submit" type="submit">
         Add Book

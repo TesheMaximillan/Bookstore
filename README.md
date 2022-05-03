@@ -10,11 +10,16 @@
 
 ## for this milestone I followed the following requirements
 
-* redux library and react-redux libraries are used.
-* Used a feature folder to structure the project.
-* Write Book actions and reducers using `ducks pattern`
-* Write categories actions and reducers using `ducks pattern`
-* Redux stores are configured
+> In this milestone I used Redux store to display books. also make the UI elements and make them dispatch actions.
+
+* States are immutable.
+* Initial state is changed by default value.
+* Redux provider is imported to the main component (`index.js`)
+* App is connected to Redux store
+* List of books are displayed in redux store
+* Books are added by using `useDispatch` method
+* Books are removed by using `useDispatch` method
+* Checkstatus functionality is when button is clicked
 
 > Also I added redux devtools
 

@@ -25,7 +25,7 @@ function NavBar() {
         <ul className="nav__links--link-items">
           {links.map((link) => (
             <li key={link.id} className="item">
-              <NavLink to={link.path} className={`item__link ${link.class}`} disable>{link.text}</NavLink>
+              <NavLink to={link.path} className={`item__link ${link.class}`}>{link.text}</NavLink>
             </li>
           ))}
         </ul>
