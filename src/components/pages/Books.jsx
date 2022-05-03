@@ -1,27 +1,10 @@
 import React from 'react';
-import { v4 as uuidv4 } from 'uuid';
 
 import AddBook from '../modules/AddBook';
 import Book from '../modules/Book';
 
 function Books() {
-  const books = [
-    {
-      id: uuidv4(),
-      title: 'book 1',
-      author: 'book 1 author',
-    },
-    {
-      id: uuidv4(),
-      title: 'book 2',
-      author: 'book 2 author',
-    },
-    {
-      id: uuidv4(),
-      title: 'book 3',
-      author: 'book 3 author',
-    },
-  ];
+  const books = [];
 
   return (
     <div>
