@@ -15,12 +15,12 @@ function Book() {
     <ul>
       {books.map((book) => (
         <li key={book.id} className="list-group-item">
-          <div key="1.toString()" className="book-description">
-            <span key="3" className="title">{book.title}</span>
-            <span key="4" className="author">{book.author}</span>
+          <div className="book-description">
+            <span className="title">{book.title}</span>
+            <span className="author">{book.author}</span>
           </div>
-          <div key="{2}" className="control-buttons">
-            <button key="{5}" type="button" className="Remove" onClick={() => handleRemoveButton(book)}>
+          <div className="control-buttons">
+            <button type="button" className="Remove" onClick={() => handleRemoveButton(book)}>
               Remove
             </button>
           </div>

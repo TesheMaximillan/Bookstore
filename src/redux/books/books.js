@@ -30,12 +30,16 @@ const bookReducer = (state = initialState, action) => {
       return [...state, action.book];
     case REMOVE_BOOK:
       return state.filter((book) => book.id !== action.book.id);
-    default: return state;
+    default:
+      return state;
   }
 };
 
 // Action Creators
-const createBooks = (title, author) => ({ type: ADD_BOOK, book: { id: uuidv4(), title, author } });
+const createBooks = (title, author) => ({
+  type: ADD_BOOK,
+  book: { id: uuidv4(), title, author },
+});
 
 const removeBooks = (book) => ({ type: REMOVE_BOOK, book });
 
