@@ -1,17 +1,26 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
+
+import { createBooks } from '../../redux/books/books';
 
 function AddBook() {
   const [addBook, setAddBook] = useState({
+    id: uuidv4(),
     title: '',
     author: '',
   });
 
+  const dispatch = useDispatch();
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    dispatch(createBooks(addBook));
   };
 
   const onInputChange = (e) => {
     setAddBook({
+      ...addBook,
       [e.target.name]: e.target.value,
     });
   };
