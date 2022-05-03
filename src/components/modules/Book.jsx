@@ -1,9 +1,16 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { removeBooks } from '../../redux/books/books';
 
 function Book() {
   const books = useSelector((state) => state.bookReducer);
+  const dispatch = useDispatch();
+
+  const handleRemoveButton = (book) => {
+    dispatch(removeBooks(book));
+  };
+
   return (
     <ul>
       {books.map((book) => (
@@ -13,7 +20,7 @@ function Book() {
             <span key="4" className="author">{book.author}</span>
           </div>
           <div key="{2}" className="control-buttons">
-            <button key="{5}" type="button" className="Remove">
+            <button key="{5}" type="button" className="Remove" onClick={() => handleRemoveButton(book)}>
               Remove
             </button>
           </div>
