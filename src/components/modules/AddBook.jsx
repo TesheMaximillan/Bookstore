@@ -25,7 +25,7 @@ function AddBook() {
         placeholder="Title"
         value={title}
         name="title"
-        onSubmit={onInputChange}
+        onChange={onInputChange}
       />
       <input
         className="input-author"
@@ -33,7 +33,7 @@ function AddBook() {
         placeholder="Author"
         value={author}
         name="author"
-        onSubmit={onInputChange}
+        onChange={onInputChange}
       />
       <button className="btn btn-submit" type="submit">
         Add Book
