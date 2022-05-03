@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.scss';
-import Books from './pages/Books';
-import Categories from './pages/Categories';
-import NavBar from './pages/NavBar';
+import Books from './components/pages/Books';
+import Categories from './components/pages/Categories';
+import NavBar from './components/pages/NavBar';
 
 function App() {
   return (
