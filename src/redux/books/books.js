@@ -35,7 +35,7 @@ const bookReducer = (state = initialState, action) => {
 };
 
 // Action Creators
-const createBooks = (book) => ({ type: ADD_BOOK, book });
+const createBooks = (title, author) => ({ type: ADD_BOOK, book: { id: uuidv4(), title, author } });
 
 const removeBooks = (book) => ({ type: REMOVE_BOOK, book });
 
