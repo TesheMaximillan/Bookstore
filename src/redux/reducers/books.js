@@ -1,29 +1,28 @@
 /* eslint-disable default-param-last */
-import { v4 as uuidv4 } from 'uuid';
-import { ADD_BOOK, REMOVE_BOOK, RETRIEVE_BOOK } from '../actionTypes/actionTypes';
+import { ADD_BOOK, REMOVE_BOOK, RETRIEVE_BOOKS } from '../actionTypes/actionTypes';
 
-const initialState = [
-  {
-    id: uuidv4(),
-    title: 'book 1',
-    author: 'book 1 author',
-  },
-  {
-    id: uuidv4(),
-    title: 'book 2',
-    author: 'book 2 author',
-  },
-  {
-    id: uuidv4(),
-    title: 'book 3',
-    author: 'book 3 author',
-  },
-];
+// const initialState = [
+//   {
+//     id: uuidv4(),
+//     title: 'book 1',
+//     author: 'book 1 author',
+//   },
+//   {
+//     id: uuidv4(),
+//     title: 'book 2',
+//     author: 'book 2 author',
+//   },
+//   {
+//     id: uuidv4(),
+//     title: 'book 3',
+//     author: 'book 3 author',
+//   },
+// ];
 
 // Reducer
-const bookReducer = (state = initialState, action) => {
+const bookReducer = (state = [], action) => {
   switch (action.type) {
-    case RETRIEVE_BOOK:
+    case RETRIEVE_BOOKS:
       return action.book;
     case ADD_BOOK:
       return [...state, action.book];
