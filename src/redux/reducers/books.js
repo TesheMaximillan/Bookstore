@@ -1,9 +1,6 @@
 /* eslint-disable default-param-last */
 import { v4 as uuidv4 } from 'uuid';
-
-// Actions
-const ADD_BOOK = 'bookstore/books/ADD_BOOK';
-const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
+import { ADD_BOOK, REMOVE_BOOK, RETRIEVE_BOOK } from '../actionTypes/actionTypes';
 
 const initialState = [
   {
@@ -26,6 +23,8 @@ const initialState = [
 // Reducer
 const bookReducer = (state = initialState, action) => {
   switch (action.type) {
+    case RETRIEVE_BOOK:
+      return action.book;
     case ADD_BOOK:
       return [...state, action.book];
     case REMOVE_BOOK:
@@ -34,15 +33,5 @@ const bookReducer = (state = initialState, action) => {
       return state;
   }
 };
-
-// Action Creators
-const createBooks = (title, author) => ({
-  type: ADD_BOOK,
-  book: { id: uuidv4(), title, author },
-});
-
-const removeBooks = (book) => ({ type: REMOVE_BOOK, book });
-
-export { createBooks, removeBooks };
 
 export default bookReducer;
