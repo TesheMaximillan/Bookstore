@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { createBooks } from '../../redux/books/books';
+import { createBooks } from '../../redux/actions/books';
 
 function AddBook() {
   const [addBook, setAddBook] = useState({
     title: '',
     author: '',
+    category: 'Fiction',
   });
 
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { title, author } = addBook;
-    dispatch(createBooks(title, author));
+    dispatch(createBooks(addBook));
   };
 
   const onInputChange = (e) => {
@@ -24,7 +24,8 @@ function AddBook() {
     });
   };
 
-  const { title, author } = addBook;
+  const { title, author, category } = addBook;
+
   return (
     <form onSubmit={handleSubmit} className="form-container">
       <input
@@ -43,6 +44,16 @@ function AddBook() {
         name="author"
         onChange={onInputChange}
       />
+      <select
+        value={category}
+        name="category"
+        className="book-category"
+        onChange={onInputChange}
+      >
+        <option value="Fiction">Fiction</option>
+        <option value="Classic">Classic</option>
+        <option value="Other">Other</option>
+      </select>
       <button className="btn btn-submit" type="submit">
         Add Book
       </button>

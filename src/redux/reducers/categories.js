@@ -1,5 +1,5 @@
 /* eslint-disable default-param-last */
-const STATUS = 'bookstore/categories/status';
+import { STATUS } from '../actionTypes/actionTypes';
 
 // Reducer
 const categoryReducer = (state = [], action) => {
@@ -9,8 +9,5 @@ const categoryReducer = (state = [], action) => {
     default: return state;
   }
 };
-
-// Action Creators
-export const checkStatus = () => ({ type: STATUS });
 
 export default categoryReducer;
