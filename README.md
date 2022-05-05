@@ -10,18 +10,13 @@
 
 ## for this milestone I followed the following requirements
 
-> In this milestone I used Redux store to display books. also make the UI elements and make them dispatch actions.
+> In this milestone I connected React-Redux application to an existing API to create and remove books in a remote server.
 
-* States are immutable.
-* Initial state is changed by default value.
+* redux-tunk is added to my project as a middleware.
+* I used axios for making API calls.
 * Redux provider is imported to the main component (`index.js`)
-* App is connected to Redux store
-* List of books are displayed in redux store
-* Books are added by using `useDispatch` method
-* Books are removed by using `useDispatch` method
-* Checkstatus functionality is when button is clicked
-
-> Also I added redux devtools
+* book lists are loaded from api when the page is reloaded
+* addBook and removeBook features are modified to work with the API
 
 ## Technologies
 
