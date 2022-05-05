@@ -7,7 +7,7 @@ function AddBook() {
   const [addBook, setAddBook] = useState({
     title: '',
     author: '',
-    category: '',
+    category: 'Fiction',
   });
 
   const dispatch = useDispatch();
