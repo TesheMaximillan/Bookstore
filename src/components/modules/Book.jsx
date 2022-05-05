@@ -1,12 +1,10 @@
 /* eslint-disable react/prop-types */
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-// import { v4 as uuidv4 } from 'uuid';
 import { removeBooks, retrieveBooks } from '../../redux/actions/books';
 
 function Book() {
   const dispatch = useDispatch();
-  // const books = useSelector((state) => state.bookReducer);
   const books = useSelector((state) => state.bookReducer);
 
   useEffect(() => {
