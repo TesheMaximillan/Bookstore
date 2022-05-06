@@ -51,8 +51,8 @@
 
 * I styled the website according to Zeplin's design
 * I created common modules like `Card` and `Button` for reusability
-* I applied component level styling using scss, and imported all of the components into `App.scss` file 
-* I applied `useEffect` and `useState` hooks for the circular progress-bar and used a random number for the pecentage
+* I applied component level styling using `scss`, and imported all of the components into `App.scss` file 
+* I applied `useEffect` and `useState` hooks for the circular progress bar and used a random number for the percentage
 * App deployed to Heroku
 ## Technologies
 

@@ -31,6 +31,7 @@
 
   .input-category {
     @include input;
+
     color: var(--warm-grey);
     flex: 1;
     margin-right: 3.4rem;
