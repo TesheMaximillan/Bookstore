@@ -1,0 +1,15 @@
+.books-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.horizontal-line {
+  border-bottom: 1px solid var(--warm-border);
+  margin: 4rem 0 2.9rem 0;
+}
+
+.heading-2 {
+  font-size: 2rem;
+  color: var(--warm-grey);
+}
