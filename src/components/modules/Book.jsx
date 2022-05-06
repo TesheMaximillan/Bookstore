@@ -24,11 +24,11 @@ function Book() {
               <span className="author">Default Author</span>
             </div>
             <div className="control-buttons">
-              <button type="button" className="btn">Comments</button>
-              <button type="button" className="btn" onClick={() => dispatch(removeBooks(book.item_id))}>
+              <button type="button" className="btn-card">Comments</button>
+              <button type="button" className="btn-card" onClick={() => dispatch(removeBooks(book.item_id))}>
                 Remove
               </button>
-              <button type="button" className="btn">Edit</button>
+              <button type="button" className="btn-card">Edit</button>
             </div>
           </li>
           <Progress />
