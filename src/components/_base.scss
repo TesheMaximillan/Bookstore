@@ -1,0 +1,41 @@
+:root {
+  --primary: #0290ff;
+  --cool-blue: #4386bf;
+  --black: #000;
+  --black-two: #121212;
+  --white: #fff;
+  --light-grey: #fafafa;
+  --grey-border: #e8e8e8;
+  --warm-grey: #888;
+}
+
+// ///////////////////////////// Global Reset
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  font-size: 1.6rem;
+  background-color: var(--light-grey);
+}
+
+@mixin input {
+  border: none;
+  height: 5rem;
+  width: 100%;
+}
