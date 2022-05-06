@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
 import { createBooks } from '../../redux/actions/books';
+import Button from '../common/Button';
 
 function AddBook() {
   const [addBook, setAddBook] = useState({
     title: '',
     author: '',
-    category: 'Fiction',
+    category: 'Action',
   });
 
   const dispatch = useDispatch();
@@ -15,6 +16,7 @@ function AddBook() {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(createBooks(addBook));
+    setAddBook({ title: '', author: '', category: 'Action' });
   };
 
   const onInputChange = (e) => {
@@ -25,6 +27,7 @@ function AddBook() {
   };
 
   const { title, author, category } = addBook;
+  const categories = ['Action', 'Science Fiction', 'Economy', 'Classic', 'Other'];
 
   return (
     <form onSubmit={handleSubmit} className="form-container">
@@ -35,6 +38,7 @@ function AddBook() {
         value={title}
         name="title"
         onChange={onInputChange}
+        required
       />
       <input
         className="input-author"
@@ -47,16 +51,14 @@ function AddBook() {
       <select
         value={category}
         name="category"
-        className="book-category"
+        className="input-category"
         onChange={onInputChange}
       >
-        <option value="Fiction">Fiction</option>
-        <option value="Classic">Classic</option>
-        <option value="Other">Other</option>
+        {categories.map((option) => (
+          <option key={option} value={option}>{option}</option>
+        ))}
       </select>
-      <button className="btn btn-submit" type="submit">
-        Add Book
-      </button>
+      <Button type="submit" className="btn-submit">Add Book</Button>
     </form>
   );
 }

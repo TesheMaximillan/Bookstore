@@ -2,15 +2,44 @@
 
 # Bookstore App
 
-> In this website, I will create an MVP version of Bookstore App that allows:
+> In this website, I creatde an MVP version of Bookstore App that allows:
 
     * Display a list of books.
     * Add a book.
     * Remove a selected book.:
 
-## for this milestone I followed the following requirements
+## In this project I followed the following requirements
 
-> In this milestone I connected React-Redux application to an existing API to create and remove books in a remote server.
+### Phase 1
+
+* Reusable components are created.
+* React router are added and setted two `<Route>` and `<Link>` for the app navigation
+* Books page is crated and setted as the default view
+* BookLists are displayed in the book page
+* a book component is created for displaying single book
+* A form for adding book is created
+* a category page is craeted with a button "Check status" only
+
+### Phase 2
+
+* redux library and react-redux libraries are used.
+* Used a feature folder to structure the project.
+* Book actions and reducers are written using `ducks pattern`
+* categories actions and reducers written using `ducks pattern`
+* Redux stores are configured
+
+### Phase 3
+
+* Made states are immutable.
+* Initial state is changed by default value.
+* Redux provider is imported to the main component (`index.js`)
+* App is connected to Redux store
+* List of books are displayed in redux store
+* Books are added by using `useDispatch` method
+* Books are removed by using `useDispatch` method
+* Checkstatus functionality is when cattegory button is clicked
+
+### Phase 4
 
 * redux-tunk is added to my project as a middleware.
 * I used axios for making API calls.
@@ -18,6 +47,13 @@
 * book lists are loaded from api when the page is reloaded
 * addBook and removeBook features are modified to work with the API
 
+### Phase 5
+
+* I styled the website according to Zeplin's design
+* I created common modules like `Card` and `Button` for reusability
+* I applied component level styling using `scss`, and imported all of the components into `App.scss` file 
+* I applied `useEffect` and `useState` hooks for the circular progress bar and used a random number for the percentage
+* App deployed to Heroku
 ## Technologies
 
 * React
@@ -25,11 +61,11 @@
 
 ## Live Demo
 
-[Live Demo Link](coming soon)
+[Live Demo Link](https://bookstoreteshe.herokuapp.com/)
 
 ## Screenshot
 
-coming soon...
+![image](https://user-images.githubusercontent.com/51437483/167161514-ddffb713-913c-4eec-af47-4280bc79da4c.png)
 
 ## Setup project in your local machine
 

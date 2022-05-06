@@ -1,0 +1,51 @@
+.list-group-item {
+  list-style: none;
+
+  .book-description {
+    font-family: 'Roboto Slab', serif;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.1rem;
+
+    .category {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: var(--black-two);
+      opacity: 0.5;
+    }
+
+    .title {
+      font-size: 2.2rem;
+      font-weight: 700;
+    }
+
+    .author {
+      color: var(--cool-blue);
+      font-size: 1.4rem;
+    }
+  }
+
+  .control-buttons {
+    .btn-card {
+      font-family: 'Roboto Slab', serif;
+      border: none;
+      background-color: var(--white);
+      color: var(--cool-blue);
+      cursor: pointer;
+
+      &:nth-child(1) {
+        padding-right: 1.5rem;
+        border-right: 1px solid var(--grey-border);
+      }
+
+      &:nth-child(2) {
+        padding: 0 1.5rem;
+      }
+
+      &:nth-child(3) {
+        padding-left: 1.5rem;
+        border-left: 1px solid var(--grey-border);
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@mixin input {
+  font-family: 'Montserrat', sans-serif;
+  border: 1px solid var(--grey-border);
+  background-color: var(--white);
+  border-radius: 0.4rem;
+  padding: 0.8rem 1.3rem;
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  width: 120rem;
+  margin: 1.9rem 0 5rem 0;
+
+  input {
+    @include input;
+
+    &::placeholder {
+      color: var(--warm-grey);
+    }
+  }
+
+  .input-title {
+    flex: 2;
+  }
+
+  .input-author {
+    flex: 2;
+    margin: 0 3.4rem;
+  }
+
+  .input-category {
+    @include input;
+
+    color: var(--warm-grey);
+    flex: 1;
+    margin-right: 3.4rem;
+  }
+}

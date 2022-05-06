@@ -5,8 +5,9 @@ import Book from '../modules/Book';
 
 function Books() {
   return (
-    <div>
+    <div className="books-container">
       <Book />
+      <div className="horizontal-line"> </div>
       <h2 className="heading-2">ADD NEW BOOK</h2>
       <AddBook />
     </div>
