@@ -2,6 +2,8 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeBooks, retrieveBooks } from '../../redux/actions/books';
+import Card from '../common/Card';
+import Progress from '../common/Progress';
 
 function Book() {
   const dispatch = useDispatch();
@@ -14,17 +16,23 @@ function Book() {
   return (
     <ul>
       {books && books.map((book) => (
-        <li key={book.item_id} className="list-group-item">
-          <div className="book-description">
-            <span className="title">{book.title}</span>
-            <span className="author">{book.category}</span>
-          </div>
-          <div className="control-buttons">
-            <button type="button" className="Remove" onClick={() => dispatch(removeBooks(book.item_id))}>
-              Remove
-            </button>
-          </div>
-        </li>
+        <Card key={book.item_id}>
+          <li className="list-group-item">
+            <div className="book-description">
+              <span className="category">{book.category}</span>
+              <span className="title">{book.title}</span>
+              <span className="author">Default Author</span>
+            </div>
+            <div className="control-buttons">
+              <button type="button" className="btn">Comments</button>
+              <button type="button" className="btn" onClick={() => dispatch(removeBooks(book.item_id))}>
+                Remove
+              </button>
+              <button type="button" className="btn">Edit</button>
+            </div>
+          </li>
+          <Progress />
+        </Card>
       ))}
     </ul>
   );
