@@ -1,0 +1,41 @@
+.bar-container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+
+  &__graph {
+    position: relative;
+    height: 6.8rem;
+    width: 6.8rem;
+    margin-right: 2rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 82%;
+      width: 82%;
+      background-color: var(--light-grey);
+      border-radius: 50%;
+    }
+  }
+
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    padding-right: 8rem;
+    border-right: 1px solid var(--grey-border);
+
+    .percentage {
+      font-size: 3.2rem;
+    }
+
+    .status {
+      color: var(--black-two);
+      opacity: 0.5;
+      transform: translateY(-1rem);
+    }
+  }
+}
