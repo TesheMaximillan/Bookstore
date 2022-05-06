@@ -16,6 +16,7 @@ function AddBook() {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(createBooks(addBook));
+    setAddBook({ title: '', author: '', category: 'Action' });
   };
 
   const onInputChange = (e) => {
